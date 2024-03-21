@@ -1,12 +1,22 @@
 @font-face {
-    font-family: first;
-    src: url(./3413twklausanne.ttf);
+    
     font-family: second;
     src: url(./3856NeueMachina.ttf);
-    font-family: third;
-    src: url(./6035twklausanne.ttf);
-    font-family: fourth;
+   color: green;
+   
+}
+@font-face {
+    font-family: first;
+    src: url(./3413twklausanne.ttf);
+}
+@font-face {
+    font-family: brand;
     src: url(./8186twklausanne.ttf);
+    
+}
+@font-face {
+    font-family: fourth;
+    src: url(./6035twklausanne.ttf);
 }
 *{
 margin: 0%;
@@ -19,14 +29,88 @@ width: 100%;
 }
 body{
     background-color: #F1EEE5;
+
+    
+}
+#main{
+    width: 100%;
+    overflow: hidden;
+}
+#cursor{
+    height: 25px;
+    width: 25px;
+    background-color: lime;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    padding: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#cursor h5{
+   text-transform: uppercase;
+   display: inline-block;
+   margin-left: 15px;
+   font-weight: 500;
+   font-size: 2vh;
+   padding: 2px 2px;
+   animation-name: cursor-move;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-duration: 1;
+   animation-timing-function: linear;
+
+}
+@keyframes cursor-move {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+nav{
+
+ width: 100%;
+
+ position: fixed;
+ top: 0;
+ z-index: 999;
+ display: flex;
+ justify-content: space-between;
+ padding-top: 4vh;
+
+}
+nav svg{
+    height: 7vh;
+    width: 6vw;
+   
+   
+}
+#navpart2{
+    width: 200px;
+    text-transform: uppercase;
+    padding-left: 2vh;
+    font-family: "second";
+    line-height: 6vh;
+    font-size: 2.3vh;
+    font-weight: 200;
+
+
+  
+}
+#navpart2 h2{
+   color: black;
+    mix-blend-mode: difference;
+  
 }
 #page1{
     min-height: 100vh;
     width: 100%;
     background-color: rgb(182, 114, 114);
     position: relative;
-    padding-top: 3vw;
-    padding-left: 3vw;
+    padding-top: 4vw;
+    padding-left: 4vw;
    background-image: url("https://images.unsplash.com/photo-1504051771394-dd2e66b2e08f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: 20% 20%;
   background-size:cover; 
@@ -45,18 +129,188 @@ body{
     height: fit-content;
     overflow: hidden;
 }
+.page1-text h1 span{
+    display: inline-block;
+}
 #page2{
     min-height: 100vh;
     width: 100%;
     background-color: black;
     border-top-right-radius: 150px;
     border-top-left-radius: 150px;
+ position: relative;
+ color: white;
+ padding-top: 16vw;
+ padding-bottom: 20vw;
 
-
+}
+#page2 h5{
+    color: yellow;
+    font-size: 1.5vw;
+}
+#page2 h1{
+    color: white;
+    font-size: 10vh;
+    width:  87%;
+    font-family: fourth;
+    line-height: 12vh;
+    padding-top: 5vh;
+    font-weight: 100;
 }
 #page3{
     min-height: 100vh;
     width: 100%;
-    background-color: rgb(241, 133, 133);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding-bottom: 30vh;
+    position: relative;
 
+}
+#page3 h1{
+    font-size: 22vh;
+    font-family: brand;
+    text-align: center;
+    padding-top: 20vh;
+    font-weight: 600;
+  
+}
+#pg3container{
+    width: 100%;
+    position: relative;
+    padding: 20vh 4vw 10vh 8vw;
+    display: flex;
+    flex-wrap: wrap;
+   gap: 1vw;
+
+}
+.card{
+    height: 94vh;
+    width: 35vw;
+    flex-shrink: 0;
+    margin: 8vh 3vw;
+
+}
+.card h2{
+    font-family: second;
+    font-weight: 600;
+    margin-top: 1vh;
+}
+.card p{
+    font-family: fourth;
+    padding-top: 1vh;
+    color: gray;
+}
+.card img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+#card-img{
+    height: 90%;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+}
+.card video{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.card:hover #card-img img{
+    scale: 1.1;
+    transition: all ease-out 0.2s;
+}
+.card:hover #card-img video{
+    scale: 1.1;
+    transition: all  ease-out 0.2s;
+}
+#page3>h2{
+    font-family: fourth;
+    font-weight: 500;
+    padding-left: 13vw;
+    width: 51%;
+    line-height: 3.6vh;
+}
+#page3 button{
+    position: absolute;
+    left: 80%;
+    padding: 2vh 2vw;
+    border-radius: 50px;
+    top: 315vh;
+    z-index: 999;
+    font-size: 2vh;
+    
+}
+#string{
+    width: 100%;
+ 
+    margin-top: 10vh;
+  
+}
+svg{
+    width: 100%; 
+  
+}
+
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #F9F7F4;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    position: relative;
+  top: -10vh;
+  padding: 15vh 0vw 15vh 6vw;
+
+    
+}
+
+#page4 h1{
+    
+    font-size: 22vh;
+    font-family: brand;
+    text-align: center;
+    padding-top: 15vh;
+    font-weight: 550;
+}
+#element-container{
+    width: 100%;
+  
+    padding: 2vh 0vh 2vh 2vh;
+    margin-top: 15vh;
+    margin-left: 4vw;
+  position: relative;
+
+}
+.element{
+    border-top: 1px solid gray;
+
+
+}
+.element h2{
+    font-size: 7vh;
+    font-family: brand;
+    font-weight: 200;
+    padding: 8vh 3vh;
+    
+}
+#moving-image{
+    height: 30vw;
+    width: 22vw;
+    position: absolute;
+    background-color: red;
+    opacity: 0;
+  
+   
+}
+#moving-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+   
 }
