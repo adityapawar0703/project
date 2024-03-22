@@ -130,25 +130,56 @@ allElements.forEach(function (elem) {
 //  string funtion 
 mypath = `M 200 200 Q 700 200 1600 200`
 finalpath = `M 200 200 Q 700 200 1600 200`
- string = document.querySelector("#string")
- string.addEventListener("mousemove",function(dets){
-  mypath = `M 200 200 Q ${dets.x} ${dets.y - 152} 1600 200`
- console.log(dets.y)
-  gsap.to("svg path",{
-   attr:{d: mypath},
-  })
+ string = document.querySelectorAll(".string")
+ string.forEach(function(val){
+  val.addEventListener("mousemove",function(dets){
+    mypath = `M 200 200 Q ${dets.x} ${dets.y} 1600 200`
+   console.log(dets.y)
+    gsap.to("svg path",{
+     attr:{d: mypath},
+    })
+   })
+  
+   val.addEventListener("mouseleave",function(){
+    gsap.to("svg path",{
+       attr:{d:finalpath},
+       ease: "elastic.out(1,0.2)",
+       duration:1,
+    })
+   })
+  
+
  })
 
- string.addEventListener("mouseleave",function(){
-  gsap.to("svg path",{
-     attr:{d:finalpath},
-     ease: "elastic.out(1,0.2)",
-     duration:1,
-  })
- })
 
 
-
-// var abcd = string.getBoundingClientRect()
+// var abcd = string.getBoundingClientRect().y
 // console.log(abcd)
 
+var body = document.querySelector("body")
+var animatednav = document.querySelectorAll("#animatednav h1")
+var page7 = document.querySelector("#page7")
+
+body.addEventListener("wheel",function(delta){
+  
+  var  navdtls = delta.y - page7.getBoundingClientRect().y
+  console.log(navdtls)
+if(navdtls>0){
+  gsap.to(animatednav,{
+    transform: `translateX(-200%)`,
+    repeat:-1,
+    duration:4,
+   
+
+  })
+}else{
+  gsap.to(animatednav,{
+    transform: `translateX(100%)`,
+   repeat:-1,
+    duration:4,
+   
+    
+  })
+}
+
+})

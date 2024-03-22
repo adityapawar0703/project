@@ -141,7 +141,7 @@ nav svg{
  position: relative;
  color: white;
  padding-top: 16vw;
- padding-bottom: 20vw;
+ padding-bottom: 2vw;
 
 }
 #page2 h5{
@@ -156,6 +156,14 @@ nav svg{
     line-height: 12vh;
     padding-top: 5vh;
     font-weight: 100;
+}
+#page2 button{
+    background-color: #D9FF06;
+    padding: 3vh 10vh;
+    border-radius: 50px;
+    font-size: 1.2vw;
+    margin-top: 6vw;
+    margin-left: 5vw;
 }
 #page3{
     min-height: 100vh;
@@ -245,7 +253,7 @@ nav svg{
     font-size: 2vh;
     
 }
-#string{
+.string{
     width: 100%;
  
     margin-top: 10vh;
@@ -312,5 +320,87 @@ svg{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    z-index: 999;
    
+}
+#page4btn{
+    padding: 2vh 5vh;
+    background-color: #D9FF06;
+    font-size: 2.2vh;
+    margin-left: 60vh;
+    margin-top: 15vh;
+    border-radius: 50px;
+    border: none;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #F9F7F4;
+    font-family: fourth;
+    font-size: 5.2vw;
+    position: relative;
+    top: -10vh;
+    padding: 5vh 0vw;
+    text-align: center;
+    font-weight: 500;
+}
+#page5logo{
+   
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 5vw;
+column-gap: 12vw;
+    margin-top: 10vw;
+    padding: 2vh 15vw;
+    align-items: center;
+   
+}
+#page5logo img{
+    flex-shrink: 0;
+    height: 4vw;
+    width: 8vw;
+   
+}
+#page5 h2{
+    font-size: 10vw;
+    margin-top: 16vw;
+}
+
+
+/* page6 space left */
+
+
+#page7{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #0F0F0F;
+    
+}
+#animatednav{
+    height: 14vw;
+    width: 100%;
+    background-color: #D9FF06;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+  
+}
+#page7 h1{
+    font-size: 4.3vw;
+    text-transform: uppercase;
+    font-family: second;
+    letter-spacing: -4;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    transform: translateX(-100%);
+
+}
+#page7 img{
+    height: 10vh;
+    width: 10vw;
+    margin: 0vh 4vw;
+  
 }
